@@ -1,6 +1,7 @@
-import React from 'react';
-import { Card, CardImg, CardTitle, CardBody, CardText, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import React, { Component } from 'react';
+import { Card, CardImg, CardTitle, CardBody, CardText, Breadcrumb, BreadcrumbItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Col, Label } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import CommentForm from './CommentFormComponent'
     
     function RenderComments(props) {
           let options = { year: "numeric", month: "short", day: "numeric" };
@@ -26,6 +27,8 @@ import { Link } from 'react-router-dom';
         </Card>   
         )
     }
+
+
     
     const Detail = (props) =>{
         return (
@@ -46,11 +49,10 @@ import { Link } from 'react-router-dom';
                 </div>
                 <div className="col-12 col-md-5 m-1">
                     <RenderComments comments={props.comments} />
+                    <CommentForm/>
                 </div>
             </div>
             </div>
         );
     }
-
-
 export default Detail
