@@ -3,6 +3,7 @@ import { Card, CardImg, CardTitle, CardBody, CardText, Breadcrumb, BreadcrumbIte
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors} from 'react-redux-form';
 import { Loading } from './LoadingComponent'
+import { baseUrl } from '../shared/baseUrl';
 
 
 const required = val => val && val.length;
@@ -135,7 +136,7 @@ class CommentForm extends Component {
     function RenderDish(props) {
         return (
             <Card>
-            <CardImg src={props.dish.image} alt={props.dish.name} />
+            <CardImg src={baseUrl + props.dish.image} alt={props.dish.name} />
             <CardBody>
                 <CardTitle>{props.dish.name}</CardTitle>
                 <CardText>{props.dish.description}</CardText>
