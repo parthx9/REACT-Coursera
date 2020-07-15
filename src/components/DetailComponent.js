@@ -135,13 +135,15 @@ class CommentForm extends Component {
     
     function RenderDish(props) {
         return (
+          <div>
             <Card>
             <CardImg src={baseUrl + props.dish.image} alt={props.dish.name} />
             <CardBody>
                 <CardTitle>{props.dish.name}</CardTitle>
                 <CardText>{props.dish.description}</CardText>
             </CardBody>
-        </Card>   
+            </Card>  
+            </div>
         )
     }
 
